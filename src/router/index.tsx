@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Button, Modal, StatusBar} from 'react-native';
+import {View, Text, Button, Modal, StatusBar, Dimensions} from 'react-native';
 
 type RouterTypes = {
   visible: boolean;
@@ -11,14 +11,16 @@ const Index: React.FC<RouterTypes> = ({visible, children, handleClose}) => {
   return (
     <Modal visible={visible}>
       <StatusBar backgroundColor="rgba(0, 0, 0, 0.5)" />
+      <View style={{width: Dimensions.get('screen').width}}>
+        <Button title="Close" onPress={handleClose} />
+      </View>
       <View
         style={{
           flex: 1,
-          backgroundColor: 'pink',
-          marginTop: StatusBar.currentHeight,
+          backgroundColor: 'transparent',
+          marginTop: StatusBar.currentHeight + 30,
         }}>
-        <Button title="Close" onPress={handleClose} />
-        {children}
+        <View style={{flex: 1}}>{children}</View>
       </View>
     </Modal>
   );
