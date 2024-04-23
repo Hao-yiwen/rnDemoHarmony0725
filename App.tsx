@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {View, Text, Button, Modal, Animated} from 'react-native';
 import AnimetedOfMeasureLayout from './src/pages/AnimatedOfMeasureLayout';
 import Router from './src/router';
@@ -30,6 +30,13 @@ const Index = () => {
   const [TextInViewVisible, setTextInViewVisible] = useState(false);
   const [modalTabView, setModalTabView] = useState(false);
   const [extendsModalVisible, setExtendsModalVisible] = useState(false);
+
+  useEffect(() => {
+    let data = new Date('2021/09/01');
+    console.log(data);
+    let data1 = new Date('2021-09-01');
+    console.log(data1);
+  }, []);
 
   return (
     <View

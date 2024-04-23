@@ -130,7 +130,9 @@ const App = () => {
         title="scroll to title"
         onPress={() => {
           titleRef.current.measureLayout(
-            findNodeHandle(sectionListRef.current),
+            // 在fabirc中 使用sectionListRef.current就能获取节点，不需要使用findNodeHandle，但是目前问题是无论是否使用findNodeHandle都会获取不到
+            // findNodeHandle(sectionListRef.current),
+            sectionListRef.current,
             (x, y, width, height) => {
               console.log('x:', x, 'y:', y, 'width:', width, 'height:', height);
               sectionListRef.current.scrollToLocation({

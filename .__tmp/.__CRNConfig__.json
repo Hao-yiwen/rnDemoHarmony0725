@@ -400,15 +400,19 @@
     "appNameIOS": "CTRIP_WIRELESS.app",
     "appIdAndroid": "ctrip.android.view",
     "appNameAndroid": "ctrip_android.apk",
+    "appIdHarmony": "com.ctrip.harmonynext",
+    "appNameHarmony": "ctrip_harmony.hap",
+    "ability":"CTEntryAbility",
     "linking": "ctrip://wireless/",
     "activity": "ctrip.business.splash.CtripSplashActivity",
-    "appVersion": "8.55.2",
-    "rnVersion": "0.70.1",
-    "reactVersion": "18.1.0",
-    "crnRepository": "git+http://git.dev.sh.ctripcorp.com/crn/crn.git#rel/8.55.2",
+    "appVersion": "8.68.6",
+    "rnVersion": "0.72.5",
+    "reactVersion": "18.2.0",
+    "crnRepository": "git+http://git.dev.sh.ctripcorp.com/crn/crn.git#rel/8.68.6",
     "packageVersion": {
-      "ios": "ios_8.55.2.zip",
-      "android": "android_8.55.2.zip"
+      "ios": "ios_8.68.6.zip",
+      "android": "android_8.68.6.zip",
+      "harmony": "harmony_8.68.6.zip"
     },
     "packageDir": "http://download2.ctripcorp.com/ahLNpUps/crn/",
     "serverPackDir": "/crn"
