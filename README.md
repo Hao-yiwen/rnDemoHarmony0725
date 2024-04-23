@@ -16,7 +16,7 @@
 
 | 序号 | 问题                                                                                                        | harmony                                   | android                                  |
 | ---- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ---------------------------------------- |
-| 1    | Animated.Scrollview 中使用 measureLayout 会失效                                                             | [code](./src/AnimatedOfMeasureLayout.tsx) | 仍然存在                                 |
+| 1    | Animated.Scrollview 中使用 measureLayout 会失效                                                             | 使用 ref 没问题                           | 仍然存在                                 |
 | 3    | 在新架构中如果要进行 measure，则使用 ref.measure，但是目前通过 sectionLoist 获取的 ref 无法进行 ref.measure | [code](./src/SectionListRefInvlid.tsx)    | 仍然存在                                 |
 | 10   | Animated.FlatList 滑动不流畅，很卡顿                                                                        | [code](./src/FlatListStuckAndStopped.tsx) | 在相同的 flatlist 复杂度情况下，未能复现 |
 | 11   | 在 ScrollView 滑动后，点击勾选组件，ScrollVIew 会闪动                                                       |                                           |                                          |
