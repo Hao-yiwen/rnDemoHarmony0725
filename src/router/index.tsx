@@ -11,7 +11,7 @@ const Index: React.FC<RouterTypes> = ({visible, children, handleClose}) => {
   return (
     <Modal visible={visible}>
       <StatusBar backgroundColor="rgba(0, 0, 0, 0.5)" />
-      <View style={{width: Dimensions.get('screen').width}}>
+      <View style={{width: Dimensions.get('screen').width, marginTop: 50}}>
         <Button title="Close" onPress={handleClose} />
       </View>
       <View

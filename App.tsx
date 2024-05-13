@@ -13,6 +13,8 @@ import TabScrollview from './src/pages/TabScrollview';
 import TextInView from './src/pages/TextInView';
 import ModalTabView from './src/pages/ModalTabView';
 import ExtendsTwo from './src/pages/EntendsTwo';
+import ViewInView from './src/pages/ViewInView';
+import LottieViewPage from './src/pages/LottieViewPage';
 
 const Index = () => {
   const [animatedOfMeasureLayoutVisible, setAnimatedOfMeasureLayoutVisible] =
@@ -30,6 +32,8 @@ const Index = () => {
   const [TextInViewVisible, setTextInViewVisible] = useState(false);
   const [modalTabView, setModalTabView] = useState(false);
   const [extendsModalVisible, setExtendsModalVisible] = useState(false);
+  const [viewInViewVisible, setViewInViewVisible] = useState(false);
+  const [lottieViewPage, setLottieViewPage] = useState(false);
 
   useEffect(() => {
     let data = new Date('2021/09/01');
@@ -117,6 +121,20 @@ const Index = () => {
             setExtendsModalVisible(true);
           }}></Button>
       </View>
+      <View style={{marginTop: 20}}>
+        <Button
+          title="ViewInView"
+          onPress={() => {
+            setViewInViewVisible(true);
+          }}></Button>
+      </View>
+      <View style={{marginTop: 20}}>
+        <Button
+          title="LottieViewPage"
+          onPress={() => {
+            setLottieViewPage(true);
+          }}></Button>
+      </View>
 
       {/* @description router component */}
       <Router
@@ -195,6 +213,20 @@ const Index = () => {
           setExtendsModalVisible(false);
         }}>
         <ExtendsTwo />
+      </Router>
+      <Router
+        visible={viewInViewVisible}
+        handleClose={() => {
+          setViewInViewVisible(false);
+        }}>
+        <ViewInView />
+      </Router>
+      <Router
+        visible={lottieViewPage}
+        handleClose={() => {
+          setLottieViewPage(false);
+        }}>
+        <LottieViewPage />
       </Router>
     </View>
   );
